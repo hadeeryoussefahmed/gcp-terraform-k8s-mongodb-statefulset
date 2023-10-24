@@ -9,12 +9,12 @@ resource "google_compute_instance" "private-vm" {
   }
   
   network_interface {
-    network = module.network.network.hadeer-vpc.id
+    network = module.network.network.id
     subnetwork = module.network.management-subnet.id
   }
 
   service_account {
-    email  = google_service_account.VM-SA.email
+    email  = module.security.security-vm
     scopes = ["cloud-platform"]
   }
 

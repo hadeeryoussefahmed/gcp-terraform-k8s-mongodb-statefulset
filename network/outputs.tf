@@ -1,5 +1,5 @@
 output "network" {
-  value       = google_compute_network.hadeer-vpc  
+  value       = google_compute_network.vpc  
   
 }
 

@@ -1,18 +1,16 @@
-module "network" {
-    source = "./network"
-}
 module "storage" {
     source = "./storage"
 
 }
 
-
 module "compute" {
     source = "./compute"
 
-}
+    #gke_service_account = 
+    #vm_service_account = 
 
+    #vpc = 
+    #workload_subnet = 
 
-module "security" {
-    source = "./IAM"
+    #management_subnet = 
 }
