@@ -9,12 +9,11 @@ resource "google_compute_instance" "private-vm" {
   }
   
   network_interface {
-    network = module.network.network.id
-    subnetwork = module.network.management-subnet.id
+    subnetwork = var.subnetwork
   }
 
   service_account {
-    email  = module.security.security-vm
+    email  = var.service_account_vm
     scopes = ["cloud-platform"]
   }
 

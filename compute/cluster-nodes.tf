@@ -9,7 +9,7 @@ resource "google_container_node_pool" "primary_node"{
     machine_type = "e2-medium"
   
 #custom service account
-    service_account = module.security.security-gke
+    service_account = var.service_account_gke
     oauth_scopes = [
       "https://www.googleapis.com/auth/cloud-platform"
     ]   

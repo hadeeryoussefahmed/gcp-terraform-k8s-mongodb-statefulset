@@ -6,8 +6,8 @@ resource "google_container_cluster" "my-cluster" {
 
   #create 1 node for each zone
   initial_node_count       = 1
-  network = module.network.network.id
-  subnetwork = module.network.workload-subnet.id
+  network = var.vpc
+  subnetwork = var.subnetwork_gke
 
    #make cluster private
   private_cluster_config {
